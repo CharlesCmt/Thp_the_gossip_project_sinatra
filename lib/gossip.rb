@@ -23,14 +23,8 @@ class Gossip
       end
 
     def self.find(id)
-        gossips = Array.new
-        CSV.read("./db/gossip.csv").each_with_index do |j, i|
-            if (id == i + 1)
-            gossips << Gossip.new(j[0], j[1])
-            break
-            end
-        end
-        return gossips
+        gossips = self.all
+        gossips[id.to_i]
     end
 
     def self.update(id, new_author, new_content)
