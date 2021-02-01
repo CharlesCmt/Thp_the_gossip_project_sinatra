@@ -4,8 +4,8 @@
   </head>
   <body>
     <h1>Edit the gossip</h1>
-    <p>Edit le potin n˚<%= id%> via le formulaire ci-dessous</p>
-    <form action='<%= id%>/edit' method='POST'>
+    <p>Edit le potin n˚<%= id %> via le formulaire ci-dessous</p>
+    <form action='/gossips/<%=id%>/edit/' method='POST'>
     <% gossips = Gossip.all %>
       Saisi ici ton nom :  <input type='text' name='author_reloaded' value="<%= gossips[id].author%>"/><br/>
       Balance ton potin :  <input type='text' name='content_reloaded' value="<%= gossips[id].content%>"/><br/>
