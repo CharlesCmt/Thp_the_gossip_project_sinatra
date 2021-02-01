@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>The Gossip Project - Edit the gossip</title>
+  </head>
+  <body>
+    <h1>Edit the gossip</h1>
+    <p>Edit le potin n˚<%= id%> via le formulaire ci-dessous</p>
+    <form action='<%= id%>/edit' method='POST'>
+      Saisi ici ton nom :  <input type='text' name='gossip_author' value="<%= gossips[id - 1].author%>"/><br/>
+      Balance ton potin :  <input type='text' name='gossip_content' value="<%= gossips[id - 1].content%>"/><br/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>
