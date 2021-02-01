@@ -4,7 +4,7 @@
   </head>
   <body>
     <h1>Edit the gossip</h1>
-    <p>Edit le potin n˚<%= id %> via le formulaire ci-dessous</p>
+    <p>Edit le potin n˚<%= id + 1 %> via le formulaire ci-dessous</p>
     <form action='/gossips/<%=id%>/edit/' method='POST'>
     <% gossips = Gossip.all %>
       Saisi ici ton nom :  <input type='text' name='author_reloaded' value="<%= gossips[id].author%>"/><br/>
